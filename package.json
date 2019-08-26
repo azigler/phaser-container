@@ -1,0 +1,40 @@
+{
+  "name": "@andrewzigler/phaser-container",
+  "version": "1.0.0",
+  "description": "Wrapper component for loading and resizing Phaser games in Vue.",
+  "homepage": "https://www.andrewzigler.com/portfolio/phaser-container-vue-component",
+  "author": "Andrew Zigler <andrewzigler@gmail.com> (https://www.andrewzigler.com)",
+  "license": "MIT",
+  "repository": "azigler/phaser-container",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "dev": "vue serve ./src/PhaserContainer.vue"
+  },
+  "main": "dist/@andrewzigler/phaser-container.ssr.js",
+  "module": "dist/@andrewzigler/phaser-container.esm.js",
+  "unpkg": "dist/@andrewzigler/phaser-container.min.js",
+  "files": [
+    "dist/*",
+    "src/**/*.vue"
+  ],
+  "dependencies": {
+    "acorn": "^6.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@vue/babel-preset-app": "3.8.0",
+    "cross-env": "^5.2.0",
+    "minimist": "^1.2.0",
+    "rollup": "^1.20.2",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

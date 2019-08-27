@@ -1,6 +1,6 @@
 {
   "name": "@andrewzigler/phaser-container",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Wrapper component for loading and resizing Phaser games in Vue.",
   "homepage": "https://www.andrewzigler.com/portfolio/phaser-container-vue-component",
   "author": "Andrew Zigler <andrewzigler@gmail.com> (https://www.andrewzigler.com)",

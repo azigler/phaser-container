@@ -7,20 +7,28 @@ var script = {
   name: 'PhaserContainer',
 
   props: {
-    phaserProps: {
-      type: Object,
-      default: function default$1() {
-        return {
-          width: 800,
-          height: 600,
-          pageContainer: 'container',
-          phaserContainer: 'phaser-container',
-          fixedSize: false
-        }
-      }
+    width: {
+      type: Number,
+      default: 800
+    },
+    height: {
+      type: Number,
+      default: 600
+    },
+    pageContainer: {
+      type: String,
+      default: 'container'
+    },
+    phaserContainer: {
+      type: String,
+      default: 'phaser-container'
+    },
+    fixedSize: {
+      type: Boolean,
+      default: false
     },
     game: {
-      default: function default$2() {
+      default: function default$1() {
         return {}
       }
     }
@@ -31,24 +39,24 @@ var script = {
 
     this.$nextTick(function () {
       // get page's main container (for sizing)
-      var pageContainer = document.getElementsByClassName(this$1.phaserProps.pageContainer)[0];
+      var pageContainer = document.getElementsByClassName(this$1.pageContainer)[0];
 
       // launch game with resizing
-      if (!this$1.phaserProps.fixedSize) {
+      if (this$1.fixedSize === false) {
         this$1.game.launch({
           width:
-            pageContainer.clientWidth < this$1.phaserProps.width ? pageContainer.clientWidth : this$1.phaserProps.width,
+            pageContainer.clientWidth < this$1.width ? pageContainer.clientWidth : this$1.width,
           height:
-            pageContainer.clientHeight < this$1.phaserProps.height ? pageContainer.clientHeight : pageContainer.clientWidth * 0.7 < this$1.phaserProps.height ? pageContainer.clientWidth * 0.7 : this$1.phaserProps.height,
+            pageContainer.clientHeight < this$1.height ? pageContainer.clientHeight : pageContainer.clientWidth * 0.7 < this$1.height ? pageContainer.clientWidth * 0.7 : this$1.height,
           parent:
-            this$1.phaserProps.phaserContainer
+            this$1.phaserContainer
         });
       // launch game without resizing
       } else {
         this$1.game.launch({
-          width: this$1.phaserProps.width,
-          height: this$1.phaserProps.height,
-          parent: this$1.phaserProps.phaserContainer
+          width: this$1.width,
+          height: this$1.height,
+          parent: this$1.phaserContainer
         });
       }
     });
@@ -140,7 +148,7 @@ var normalizeComponent_1 = normalizeComponent;/* script */
 var __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":_vm.phaserProps.phaserContainer}},[])};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":_vm.phaserContainer}},[])};
 var __vue_staticRenderFns__ = [];
 
   /* style */
@@ -148,7 +156,7 @@ var __vue_staticRenderFns__ = [];
   /* scoped */
   var __vue_scope_id__ = undefined;
   /* module identifier */
-  var __vue_module_identifier__ = "data-v-50f872d2";
+  var __vue_module_identifier__ = "data-v-0e453036";
   /* functional template */
   var __vue_is_functional_template__ = false;
   /* style inject */

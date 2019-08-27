@@ -39,7 +39,7 @@ var script = {
           width:
             pageContainer.clientWidth < this$1.phaserProps.width ? pageContainer.clientWidth : this$1.phaserProps.width,
           height:
-            pageContainer.clientHeight < this$1.phaserProps.height ? pageContainer.clientHeight : pageContainer.clientWidth * 0.7 < his.phaserProps.height ? pageContainer.clientWidth * 0.7 : this$1.phaserProps.height,
+            pageContainer.clientHeight < this$1.phaserProps.height ? pageContainer.clientHeight : pageContainer.clientWidth * 0.7 < this$1.phaserProps.height ? pageContainer.clientWidth * 0.7 : this$1.phaserProps.height,
           parent:
             this$1.phaserProps.phaserContainer
         });
@@ -148,7 +148,7 @@ var __vue_staticRenderFns__ = [];
   /* scoped */
   var __vue_scope_id__ = undefined;
   /* module identifier */
-  var __vue_module_identifier__ = "data-v-29c405d8";
+  var __vue_module_identifier__ = "data-v-1f0c4e62";
   /* functional template */
   var __vue_is_functional_template__ = false;
   /* style inject */

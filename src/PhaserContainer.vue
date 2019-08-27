@@ -32,7 +32,7 @@ export default {
       const pageContainer = document.getElementsByClassName(this.phaserProps.pageContainer)[0]
 
       // launch game with resizing
-      if (!this.fixedSize) {
+      if (!this.phaserProps.fixedSize) {
         this.game.launch({
           width:
             pageContainer.clientWidth < this.phaserProps.width ? pageContainer.clientWidth : this.phaserProps.width,

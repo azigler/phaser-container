@@ -34,7 +34,7 @@ var script = {
       var pageContainer = document.getElementsByClassName(this$1.phaserProps.pageContainer)[0];
 
       // launch game with resizing
-      if (!this$1.fixedSize) {
+      if (!this$1.phaserProps.fixedSize) {
         this$1.game.launch({
           width:
             pageContainer.clientWidth < this$1.phaserProps.width ? pageContainer.clientWidth : this$1.phaserProps.width,
@@ -148,7 +148,7 @@ var __vue_staticRenderFns__ = [];
   /* scoped */
   var __vue_scope_id__ = undefined;
   /* module identifier */
-  var __vue_module_identifier__ = "data-v-1f0c4e62";
+  var __vue_module_identifier__ = "data-v-50f872d2";
   /* functional template */
   var __vue_is_functional_template__ = false;
   /* style inject */

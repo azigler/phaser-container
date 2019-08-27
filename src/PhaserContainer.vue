@@ -37,7 +37,7 @@ export default {
           width:
             pageContainer.clientWidth < this.phaserProps.width ? pageContainer.clientWidth : this.phaserProps.width,
           height:
-            pageContainer.clientHeight < this.phaserProps.height ? pageContainer.clientHeight : pageContainer.clientWidth * 0.7 < his.phaserProps.height ? pageContainer.clientWidth * 0.7 : this.phaserProps.height,
+            pageContainer.clientHeight < this.phaserProps.height ? pageContainer.clientHeight : pageContainer.clientWidth * 0.7 < this.phaserProps.height ? pageContainer.clientWidth * 0.7 : this.phaserProps.height,
           parent:
             this.phaserProps.phaserContainer
         })

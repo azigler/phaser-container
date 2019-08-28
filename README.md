@@ -13,6 +13,7 @@ height: (height of game in pixels, default: 600)
 pageContainer: (class name of parent element, for determining max sizes, default: 'container')
 phaserContainer: (ID name of element to contain Phaser element, default: 'phaser-container')
 fixedSize: (if true, prevents the component from resizing based on pageContainer, default: false)
+game: (imported Phaser game file)
 ```
 
 ## Installation

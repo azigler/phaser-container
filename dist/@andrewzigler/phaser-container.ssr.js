@@ -33,30 +33,43 @@ var script = {
       }
     }
   },
-  
+
+  destroyed: function destroyed() {
+    this.gameObject.destroy();
+  },
+
   mounted: function mounted() {
     var this$1 = this;
 
     this.$nextTick(function () {
       // get page's main container (for sizing)
-      var pageContainer = document.getElementsByClassName(this$1.pageContainer)[0];
+      var pageContainer = document.getElementsByClassName(
+        this$1.pageContainer
+      )[0];
 
       // launch game with resizing
       if (this$1.fixedSize === false) {
-        this$1.game.launch({
+        this$1.gameObject = this$1.game.launch({
           width:
-            pageContainer.clientWidth < this$1.width ? pageContainer.clientWidth : this$1.width,
+            pageContainer.clientWidth < this$1.width
+              ? pageContainer.clientWidth
+              : this$1.width,
           height:
-            pageContainer.clientHeight < this$1.height ? pageContainer.clientHeight : pageContainer.clientWidth * 0.7 < this$1.height ? pageContainer.clientWidth * 0.7 : this$1.height,
-          parent:
-            this$1.phaserContainer
+            pageContainer.clientHeight < this$1.height
+              ? pageContainer.clientHeight
+              : pageContainer.clientWidth * 0.7 < this$1.height
+              ? pageContainer.clientWidth * 0.7
+              : this$1.height,
+          parent: this$1.phaserContainer,
+          store: this$1.$store ? this$1.$store : null
         });
-      // launch game without resizing
+        // launch game without resizing
       } else {
-        this$1.game.launch({
+        this$1.gameObject = this$1.game.launch({
           width: this$1.width,
           height: this$1.height,
-          parent: this$1.phaserContainer
+          parent: this$1.phaserContainer,
+          store: this$1.$store ? this$1.$store : null
         });
       }
     });
@@ -156,7 +169,7 @@ var __vue_staticRenderFns__ = [];
   /* scoped */
   var __vue_scope_id__ = undefined;
   /* module identifier */
-  var __vue_module_identifier__ = "data-v-0e453036";
+  var __vue_module_identifier__ = "data-v-9dbfda36";
   /* functional template */
   var __vue_is_functional_template__ = false;
   /* style inject */

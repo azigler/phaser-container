@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/%40andrewzigler%2Fphaser-container.svg)](https://badge.fury.io/js/%40andrewzigler%2Fphaser-container)
 
-Wrapper component for loading and resizing [Phaser](https://phaser.io/) games in Vue.
+Wrapper component for loading and resizing [Phaser](https://phaser.io/) games in Vue. If provided a [Vuex](https://vuex.vuejs.org/) store instance, the component can pass the store to your game so you can share state between Vue and Phaser.
 
 Example of this component in action: [https://www.andrewzigler.com/example/nuxt-and-phaser/](https://www.andrewzigler.com/example/nuxt-and-phaser/)
 
@@ -14,6 +14,7 @@ pageContainer: (class name of parent element, for determining max sizes, default
 phaserContainer: (ID name of element to contain Phaser element, default: 'phaser-container')
 fixedSize: (if true, prevents the component from resizing based on pageContainer, default: false)
 game: (imported Phaser game file)
+store: (Vuex store, default: undefined)
 ```
 
 ## Installation

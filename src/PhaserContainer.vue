@@ -33,28 +33,41 @@ export default {
       }
     }
   },
-  
+
+  destroyed() {
+    this.gameObject.destroy()
+  },
+
   mounted() {
     this.$nextTick(() => {
       // get page's main container (for sizing)
-      const pageContainer = document.getElementsByClassName(this.pageContainer)[0]
+      const pageContainer = document.getElementsByClassName(
+        this.pageContainer
+      )[0]
 
       // launch game with resizing
       if (this.fixedSize === false) {
-        this.game.launch({
+        this.gameObject = this.game.launch({
           width:
-            pageContainer.clientWidth < this.width ? pageContainer.clientWidth : this.width,
+            pageContainer.clientWidth < this.width
+              ? pageContainer.clientWidth
+              : this.width,
           height:
-            pageContainer.clientHeight < this.height ? pageContainer.clientHeight : pageContainer.clientWidth * 0.7 < this.height ? pageContainer.clientWidth * 0.7 : this.height,
-          parent:
-            this.phaserContainer
+            pageContainer.clientHeight < this.height
+              ? pageContainer.clientHeight
+              : pageContainer.clientWidth * 0.7 < this.height
+              ? pageContainer.clientWidth * 0.7
+              : this.height,
+          parent: this.phaserContainer,
+          store: this.$store ? this.$store : null
         })
-      // launch game without resizing
+        // launch game without resizing
       } else {
-        this.game.launch({
+        this.gameObject = this.game.launch({
           width: this.width,
           height: this.height,
-          parent: this.phaserContainer
+          parent: this.phaserContainer,
+          store: this.$store ? this.$store : null
         })
       }
     })

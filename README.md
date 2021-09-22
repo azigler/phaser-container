@@ -6,8 +6,6 @@
 
 Wrapper component for loading and resizing [Phaser](https://phaser.io/) games in Vue. If provided a [Vuex](https://vuex.vuejs.org/) store instance, the component can pass the store to your game so you can share state between Vue and Phaser.
 
-Example of this component in action: [https://www.andrewzigler.com/example/nuxt-and-phaser/](https://www.andrewzigler.com/example/nuxt-and-phaser/)
-
 ## Component Props
 ```
 width: (width of game in pixels, default: 800)

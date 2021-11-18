@@ -1,6 +1,6 @@
 ![](https://repository-images.githubusercontent.com/204579833/28182200-2654-11ea-8811-995f90c68ed8)
 
-# @andrewzigler/phaser-container
+# @andrewzigler/phaser-container *\*\*(deprecated)\*\**
 
 [![npm version](https://badge.fury.io/js/%40andrewzigler%2Fphaser-container.svg)](https://badge.fury.io/js/%40andrewzigler%2Fphaser-container)
 
